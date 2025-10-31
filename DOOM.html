@@ -5,6 +5,7 @@
             body, html {
                 margin: 0;
                 padding: 0;
+                background-color: black;
             }
         </style>
     </head>
@@ -13,12 +14,16 @@
             <div id="game"></div>
         </div>
         <script>
+            // EmulatorJS setup
             EJS_player = "#game";
-            EJS_core = "nes";
-            EJS_color = "#0064ff";
+            EJS_core = "dosbox"; // changed from "nes" to DOSBox core for DOS/PC games
+            EJS_color = "#222"; // optional UI accent color
             EJS_startOnLoaded = true;
             EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            EJS_gameUrl = "DOOM.WAD";
+
+            // Path to your DOS game (e.g. DOOM files, ZIP, or folder)
+            // You can use a .zip containing DOOM.EXE and DOOM.WAD
+            EJS_gameUrl = "https://synlspy.github.io/ROMS/DOOM.zip";
         </script>
         <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
     </body>
